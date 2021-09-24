@@ -3,7 +3,7 @@
 MyFrame::MyFrame(const wxString& title)
     : wxFrame(NULL, wxID_ANY, title)
 {
-    // Éú³É²Ëµ¥À¸
+    // ç”Ÿæˆèœå•æ 
     wxMenu *fileMenu = new wxMenu;
     wxMenu *helpMenu = new wxMenu;
     helpMenu->Append(wxID_ABOUT, wxT("&About...\tF1"), wxT("Show about dialog"));
@@ -12,9 +12,9 @@ MyFrame::MyFrame(const wxString& title)
     wxMenuBar *menuBar = new wxMenuBar();
     menuBar->Append(fileMenu, wxT("&File"));
     menuBar->Append(helpMenu, wxT("&Help"));
-    // ½«²Ëµ¥À¸·Åµ½MyFrameÖÐ
+    // å°†èœå•æ æ”¾åˆ°MyFrameä¸­
     SetMenuBar(menuBar);
-    //¼ÓÈë×´Ì¬À¸
+    //åŠ å…¥çŠ¶æ€æ 
     CreateStatusBar(2);
     SetStatusText(wxT("Welcome to wxWidgets!"));
 }
@@ -24,17 +24,17 @@ void MyFrame::OnAbout(wxCommandEvent& event)
     wxString msg;
     msg.Printf(wxT("Hello and welcome to %s"),
                 wxVERSION_STRING);
-    wxMessageBox(msg, wxT("¹ØÓÚ"),
+    wxMessageBox(msg, wxT("å…³äºŽ"),
                 wxOK | wxICON_INFORMATION, this);
 }
 
 void MyFrame::OnQuit(wxCommandEvent& event)
 {
-    // ¹Ø±ÕMyFrame
+    // å…³é—­MyFrame
     Close();
 }
 
-// MyFrameµÄÊÂ¼þ±í  ->  ·ÅÖÃÓÚÀàµÄÊµÏÖÎÄ¼þÖÐ
+// MyFrameçš„äº‹ä»¶è¡¨  ->  æ”¾ç½®äºŽç±»çš„å®žçŽ°æ–‡ä»¶ä¸­
 BEGIN_EVENT_TABLE(MyFrame, wxFrame)
     EVT_MENU(wxID_ABOUT, MyFrame::OnAbout)
     EVT_MENU(wxID_EXIT, MyFrame::OnQuit)

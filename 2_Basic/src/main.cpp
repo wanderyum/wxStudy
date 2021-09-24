@@ -3,23 +3,23 @@
 class MyApp : public wxApp
 {
 public:
-    /* ½«ÔÚ³ÌÐòÆô¶¯Ê±±»µ÷ÓÃ */
+    /* å°†åœ¨ç¨‹åºå¯åŠ¨æ—¶è¢«è°ƒç”¨ */
     virtual bool OnInit();
 };
 
-/* ³ÌÐòµÄ³õÊ¼»¯ */
+/* ç¨‹åºçš„åˆå§‹åŒ– */
 bool MyApp::OnInit()
 {
-    /* ´´½¨Ö÷´°¿Ú */
-    MyFrame* mainWin = new MyFrame(wxT("Ò»¸ö¼òµ¥µÄÊ¾Àý³ÌÐò"));
-    /* ÏÔÊ¾Ö÷´°¿Ú */
+    /* åˆ›å»ºä¸»çª—å£ */
+    MyFrame* mainWin = new MyFrame(wxT("ä¸€ä¸ªç®€å•çš„ç¤ºä¾‹ç¨‹åº"));
+    /* æ˜¾ç¤ºä¸»çª—å£ */
     mainWin->Show(true);
-    /* Æô¶¯ÊÂ¼þÕìÌý */
+    /* å¯åŠ¨äº‹ä»¶ä¾¦å¬ */
     return true;
 }
 
-/* ÄÜ¹»ÓÃwxGetApp()À´»ñÈ¡ÊµÀý»¯MyAppµÄÒýÓÃ */
+/* èƒ½å¤Ÿç”¨wxGetApp()æ¥èŽ·å–å®žä¾‹åŒ–MyAppçš„å¼•ç”¨ */
 DECLARE_APP(MyApp)
 
-/* ×Ô¶¯´´½¨mainº¯Êý²¢ÊµÀý»¯MyApp */
+/* è‡ªåŠ¨åˆ›å»ºmainå‡½æ•°å¹¶å®žä¾‹åŒ–MyApp */
 IMPLEMENT_APP(MyApp)
